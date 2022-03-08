@@ -1,4 +1,8 @@
 .cartridges {
+    margin-top: -138px;
+    position: relative;
+    z-index: 2;
+
     &__wave {
         display: block;
         width: 100%;

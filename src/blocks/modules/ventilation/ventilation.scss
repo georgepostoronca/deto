@@ -1,0 +1,248 @@
+.ventilation {
+    img {
+        max-width: 100%;
+    }
+
+    &__wave {
+        display: block;
+        max-width: 100%;
+    }
+
+    &__wrap {
+        position: relative;
+        z-index: 2;
+
+        @media(max-width: 1080px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        img, svg {
+            display: block;
+            position: relative;
+            left: 25px;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            margin-top: -46px;
+
+            @media(max-width: 1080px) {
+                left: 0;
+            }
+
+            @media(max-width: 680px) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__desc {
+        position: absolute;
+        top: 13.8%;
+        right: 10.7%;
+        width: 453px;
+        font-weight: 400;
+        text-align: center;
+
+        @media(max-width: 1080px) {
+            right: 7vw;
+        }
+
+        @media(max-width: 992px) {
+            right: 20px;
+            width: 50%;
+            text-align: right;
+        }
+
+        @media(max-width: 768px) {
+            top: 10%;
+        }
+
+        @media(max-width: 680px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: left;
+            margin-top: 20px;
+        }
+    }
+
+    &__desc-bottom {
+        width: 410px;
+        color: $violet;
+        text-align: center;
+        //margin-left: 53px;
+        //margin-top: 95px;
+        margin-left: 2.8vw;
+        margin-top: 5vw;
+
+        @media(max-width: 1180px) {
+            width: 40vw;
+            margin-left: 0;
+            margin-bottom: 5vw;
+            padding: 0 20px;
+        }
+
+        @media(max-width: 992px) {
+            margin-bottom: 25vw;
+            width: 100%;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        @media(max-width: 768px) {
+            margin-bottom: 30vw;
+        }
+    }
+
+    &__bottom {
+        margin-top: -175px;
+        background: url("../img/vacantion-bottom.jpg") top center no-repeat;
+        background-size: cover;
+        position: relative;
+        padding-bottom: 38px;
+
+        @media(max-width: 1080px) {
+            padding-bottom: 10vw;
+        }
+
+        @media(max-width: 768px) {
+            margin-top: -28vw;
+        }
+
+        ul {
+            width: 248px;
+            margin-top: 66px;
+            margin-left: 69px;
+
+            @media(max-width: 992px) {
+                margin-left: 20px;
+            }
+
+            @media(max-width: 650px) {
+                box-sizing: border-box;
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: 0;
+                margin-top: 40px;
+            }
+
+            li {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 39px;
+
+                &:nth-child(2) {
+                    margin-left: 33px;
+
+                    @media(max-width: 768px) {
+                        margin-left: 0;
+                    }
+                }
+
+                &:nth-child(3) {
+                    margin-left: 181px;
+
+                    @media(max-width: 768px) {
+                        margin-left: 0;
+                    }
+                }
+
+                svg {
+                    width: 90px;
+                    height: 90px;
+                    margin-bottom: 21px;
+
+                    @media(max-width: 650px) {
+                        width: 70px;
+                        height: 70px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                span {
+                    width: 284px;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 23px;
+                    text-align: center;
+
+                    @media(max-width: 650px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &-images {
+            position: absolute;
+            top: 14.7%;
+            right: 17.8%;
+
+            img {
+                display: block;
+            }
+
+            @media(max-width: 768px) {
+                right: 5%;
+            }
+
+            @media(max-width: 650px) {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                right: 0;
+                width: 100%;
+                margin: 0 auto;
+                margin-bottom: 20vw;
+            }
+
+            @media(max-width: 480px) {
+                margin-bottom: 40vw;
+            }
+
+            .first {
+                width: 278px;
+
+                @media(max-width: 650px) {
+                    position: relative;
+                    left: 5vw;
+                    width: 200px;
+                }
+
+                @media(max-width: 480px) {
+                    width: 40vw;
+                    height: 40vw;
+                }
+            }
+
+            .second {
+                position: absolute;
+                top: 65%;
+                right: -44%;
+                width: 234px;
+
+                @media(max-width: 768px) {
+                    right: 0;
+                }
+
+                @media(max-width: 650px) {
+                    position: relative;
+                    right: 5vw;
+                    width: 180px;
+                    height: 180px;
+                }
+
+                @media(max-width: 480px) {
+                    width: 40vw;
+                    height: 40vw;
+                }
+            }
+        }
+    }
+}

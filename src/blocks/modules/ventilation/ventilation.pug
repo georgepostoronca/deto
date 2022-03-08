@@ -1,0 +1,32 @@
+.ventilation
+    .container
+        img(class="ventilation__wave" role="presentation" src="img/ventilation-top-wave.png" alt="image wave in ventilation block")
+
+        .ventilation__wrap
+            p.ventilation__desc.text Вентиляция позволяет избежать образования излишней влаги во время ванных процедур
+            //img(src="img/ventilation-bg.svg" alt="ventilation image")
+            include ./ventilation-bg
+            p.ventilation__desc-bottom.text.text--upercase.text--bold ЦЕЛЬНОЛИТОЙ ЛАТУННЫЙ СМЕСИТЕЛЬ С РЕЗЬБОВЫМИ СОЕДИНЕНИЯМИ И КАРТРИДЖАМИ ИЗ КЕРАМИКИ
+
+
+        .ventilation__bottom
+            img(class="ventilation__wave-bottom" role="presentation" src="img/ventilation-wave-bottom.png" alt="image wave bottom in ventilation block")
+
+            ul
+                li
+
+                    +svg("clock")
+                    span Длительный срок службы до 15 лет
+                li
+                    +svg("celsius")
+                    span Стойкость к перепадам температур
+                li
+                    +svg("wawe")
+                    span Устойчивость к коррозии и ржавчине
+
+            .ventilation__bottom-images
+                img(class="first" src="img/ventilation-image-1.png" alt="shower hose")
+                img(class="second" src="img/ventilation-image-2.png" alt="shower head")
+
+
+
