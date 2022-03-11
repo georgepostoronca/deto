@@ -1,0 +1,130 @@
+.easy-fix {
+    &__wrap {
+        background: url("../img/easy-fix-bg.jpg") top center no-repeat;
+        background-size: cover;
+        padding-top: 69px;
+        padding-left: 124px;
+        padding-right: 2vw;
+        padding-bottom: 4.9vw;
+
+        @media(max-width: 1200px) {
+            padding-left: 5vw;
+        }
+
+        @media(max-width: 1080px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @media(max-width: 575px) {
+            padding-top: 30px;
+        }
+
+        h2 {
+            padding-right: 4.6vw;
+            text-align: center;
+            text-shadow: $white-gradient;
+        }
+
+        ul {
+            margin-top: 38px;
+            display: flex;
+            flex-wrap: wrap;
+
+            @media(max-width: 1080px) {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        li {
+            text-align: center;
+
+            @media(max-width: 1080px) {
+                box-sizing: border-box;
+                width: 45vw;
+                padding: 0 20px;
+                margin-bottom: 40px;
+            }
+
+            @media(max-width: 570px) {
+                width: 100%;
+            }
+
+            @media(min-width: 1081px) {
+                &:nth-child(2) {
+                    width: 268px;
+                    margin-left: 227px;
+                }
+
+                &:nth-child(3) {
+                    width: 330px;
+                    margin-left: 185px;
+                    margin-top: -37px;
+
+                    svg {
+                        margin-bottom: 12px;
+                    }
+                }
+
+                &:nth-child(4) {
+                    width: 261px;
+                    margin-left: 183px;
+                    margin-top: -37px;
+                }
+            }
+
+            svg {
+                width: 147px;
+                height: 147px;
+                margin-bottom: 25px;
+
+                @media(max-width: 768px) {
+                    margin-bottom: 10px;
+                }
+
+                @media(max-width: 575px) {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            h4 {
+                font-size: 36px;
+                line-height: 38px;
+                text-shadow: $white-gradient;
+                color: $violet;
+                font-weight: 700;
+
+                @media(max-width: 768px) {
+                    font-size: 28px;
+                    line-height: 1.2;
+                }
+
+                @media(max-width: 575px) {
+                    font-size: 24px;
+                }
+            }
+
+            span {
+                font-size: 24px;
+                line-height: 25px;
+                font-weight: 600;
+                text-shadow: $white2-gradient;
+                margin-top: 25px;
+                display: block;
+                text-align: center;
+
+                @media(max-width: 768px) {
+                    font-size: 20px;
+                    line-height: 1.2;
+                    margin-top: 5px;
+                }
+
+                @media(max-width: 575px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
