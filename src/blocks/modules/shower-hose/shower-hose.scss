@@ -1,0 +1,11 @@
+.shower-hose {
+  &__wrap {
+    background: linear-gradient(#7D6A9C, #0C031B);
+
+    svg {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

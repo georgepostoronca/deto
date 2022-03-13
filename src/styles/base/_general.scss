@@ -54,7 +54,12 @@ html, body {
     color: $black;
     font-weight: 400;
     font-size: 18px;
-    line-height: 19px
+    line-height: 19px;
+    box-sizing: border-box;
+}
+
+* > * {
+    box-sizing: inherit;
 }
 
 .container {
@@ -106,5 +111,85 @@ h1, .h1 {
 
     &--upercase {
         text-transform: uppercase;
+    }
+}
+
+//Icon Item
+.icon-item {
+    display: flex;
+    align-items: center;
+
+    @media(max-width: 575px) {
+        align-items: flex-start;
+    }
+
+    &__img {
+        width: 90px;
+
+        @media(max-width: 768px) {
+            margin-top: 10px;
+        }
+
+        @media(max-width: 575px) {
+            width: 40px;
+        }
+
+        img, svg {
+            width: 90px;
+            height: 90px;
+            display: block;
+
+            @media(max-width: 575px) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    &__content {
+        padding-left: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: calc(100% - 90px);
+
+        @media(max-width: 992px) {
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        @media(max-width: 575px) {
+            width: calc(100% - 40px);
+        }
+
+        h4 {
+            font-size: 36px;
+            line-height: 37px;
+            font-weight: 600;
+            color: $orange;
+            margin-bottom: 18px;
+
+            @media(max-width: 992px) {
+                font-size: 30px;
+                line-height: 1;
+                margin-bottom: 10px;
+            }
+
+            @media(max-width: 575px) {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1;
+            font-weight: 400;
+            color: $violet;
+
+            @media(max-width: 992px) {
+                font-size: 16px;
+            }
+        }
     }
 }
