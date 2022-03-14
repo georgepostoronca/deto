@@ -6,6 +6,11 @@
             padding-left: 79px;
             padding-right: 79px;
             margin-bottom: 39px;
+            text-align: left;
+
+            z-index: 1;
+            position: relative;
+            margin-top: 17px;
 
             @media(max-width: 768px) {
                 padding-left: 20px;

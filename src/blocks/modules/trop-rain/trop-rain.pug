@@ -1,0 +1,20 @@
+.trop-rain
+    .container
+        .trop-rain__wrap
+            img(class="trop-rain__wave" src="img/trop-rain-wave.png" alt="wave image" role="presentation")
+            img(class="trop-rain__wave-bottom" src="img/trop-rain-wave-bottom.png" alt="bottom wave image" role="presentation")
+            img(class="trop-rain__girl" src="img/girl.png" alt="girl")
+
+            canvas#canvas.trop-rain__rain
+
+            .trop-rain__head
+                h2.h2 ПОЛНОЕ ВОСПРОИЗВЕДЕНИЕ ЭФФЕКТА ТРОПИЧЕСКОГО ДОЖДЯ
+                h3 в душевой кабине
+
+            .trop-rain__grid
+                .trop-rain__grid-item
+                    +svg("water")
+                    p Поток воды будет равномерно покрывать все ваше тело за счет технологии смешивания воды с воздухом
+                .trop-rain__grid-item.right
+                    +svg("shower")
+                    p Струи тропического душа гораздо крупнее и мягче, что создает приятный массажный эффект

@@ -2,10 +2,13 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "gulp-pug-starter"
+	- const title = "Deto"
 
 block content
 	include ../blocks/modules/header/header
+	include ../blocks/modules/opt-size/opt-size
+	include ../blocks/modules/palette/palette
+	include ../blocks/modules/trop-rain/trop-rain
 	include ../blocks/modules/shower-head/shower-head
 	include ../blocks/modules/shower-hose/shower-hose
 	include ../blocks/modules/ventilation/ventilation
@@ -15,4 +18,3 @@ block content
 
 block scripts
 	script(src="js/main.js")
-	script(src="js/vendor.js")
