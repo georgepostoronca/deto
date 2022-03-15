@@ -1,44 +1,55 @@
 header.header
     .container
-        .hedaer__wrap
+        .header__wrap
+            h1.mobile.text-center ДУШЕВАЯ КАБИНА DETO L790
+
             //Image
             .header__img
+                .header__img-inner.js-header-opened
+                    img(src="img/shower.png" class="closed" alt="душ")
+                    img(src="img/shower-opened.png" class="opened" alt="открытый душ")
+                    span.js-scroll-to 90x90
+                    em 33 900 ₽
 
             //Content
             .header__content
-                h1.text-center ДУШЕВАЯ КАБИНА DETO L790
+                h1.desktop.text-center ДУШЕВАЯ КАБИНА DETO L790
 
-                .item
-                    .item__svg
-                        svg("settings")
-                    .item__content
-                        h5 Easy Fix
-                        p Супер легкая сборка
+                .header__grid
+                    .item.js-header-item
+                        .item__svg.flare
+                            +svg("settings")
+                        .item__content
+                            h5 Easy Fix
+                            p Супер легкая сборка
 
-                .item
-                    .item__svg
-                        svg("refresh")
-                    .item__content
-                        h5 Click-Clack
-                        p Удобная эксплуатация
+                    .item.js-header-item
+                        .item__svg.flare
+                            +svg("refresh")
+                        .item__content
+                            h5 Click-Clack
+                            p Удобная эксплуатация
 
-                .item
-                    .item__svg
-                        svg("clean")
-                    .item__content
-                        h5 Easy Clean
-                        p Легкий и простой уход за кабиной
+                    .item.js-header-item
+                        .item__svg.flare
+                            +svg("clean")
+                        .item__content
+                            h5 Easy Clean
+                            p Легкий и простой уход за кабиной
 
-                .item
-                    .item__svg
-                        svg("silicon-free")
-                    .item__content
-                        h5 Silikon Free
-                        p Сборка без использования силикона
+                    .item.js-header-item
+                        .item__svg.flare
+                            +svg("silicon-free")
+                        .item__content
+                            h5 Silikon Free
+                            p Сборка без использования силикона
 
-                .item
-                    .item__svg
-                        svg("tempered-glass")
-                    .item__content
-                        h5 Тempered glass
-                        p Безопасное закаленное стекло
+                    .item.js-header-item
+                        .item__svg.flare
+                            +svg("tempered-glass")
+                        .item__content
+                            h5 Тempered glass
+                            p Безопасное закаленное стекло
+
+                button
+                    span КУПИТЬ

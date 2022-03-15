@@ -363,3 +363,37 @@ var Ticker = (function(){
 
     return PUBLIC_API;
 }());
+
+
+
+
+
+
+// ===============================
+let toOptSize = document.querySelector(".js-scroll-to");
+let optSizeBLock = document.querySelector("#opt-size");
+
+if(toOptSize && optSizeBLock) {
+    toOptSize.addEventListener("click", () => {
+        optSizeBLock.scrollIntoView({block: "center", behavior: "smooth"});
+    })
+}
+
+// Header Hover item
+let headerHoverItem = document.querySelectorAll(".js-header-item");
+let headerHoverOpened = document.querySelector(".js-header-opened");
+
+if(headerHoverItem && headerHoverOpened) {
+    headerHoverItem.forEach(item => {
+        console.log(item, headerHoverOpened)
+        item.addEventListener("mouseover", () => {
+            console.log("onmouseover")
+            headerHoverOpened.classList.add("active")
+        })
+
+        item.addEventListener("mouseout", () => {
+            console.log("onmouseout")
+            headerHoverOpened.classList.remove("active")
+        })
+    })
+}
