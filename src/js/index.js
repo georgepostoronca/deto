@@ -1,6 +1,6 @@
 // import "./import/modules";
 // import "./import/components";
-
+AOS.init();
 
 // Falling rain simulation using 2D canvas
 // - vanilla JS, no frameworks
@@ -385,15 +385,38 @@ let headerHoverOpened = document.querySelector(".js-header-opened");
 
 if(headerHoverItem && headerHoverOpened) {
     headerHoverItem.forEach(item => {
-        console.log(item, headerHoverOpened)
         item.addEventListener("mouseover", () => {
-            console.log("onmouseover")
             headerHoverOpened.classList.add("active")
         })
 
         item.addEventListener("mouseout", () => {
-            console.log("onmouseout")
             headerHoverOpened.classList.remove("active")
         })
     })
 }
+
+
+// const swiper = new Swiper(".mySwiper", {
+//     direction: "vertical",
+//     loop: true,
+//     spaceBetween: 7,
+//     slidesPerView: 5,
+//     freeMode: true,
+//     watchSlidesProgress: true,
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
+// });
+//
+// const swiper2 = new Swiper(".mySwiper2", {
+//     loop: true,
+//     spaceBetween: 10,
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
+//     thumbs: {
+//         swiper: swiper,
+//     },
+// });

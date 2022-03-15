@@ -1,4 +1,4 @@
-.ventilation
+.ventilation(data-aos)
     .container
         //img(class="ventilation__wave" role="presentation" src="img/ventilation-top-wave.png" alt="image wave in ventilation block")
 
@@ -6,27 +6,26 @@
             p.ventilation__desc.text Вентиляция позволяет избежать образования излишней влаги во время ванных процедур
             //img(src="img/ventilation-bg.svg" alt="ventilation image")
             include ./ventilation-bg
-            p.ventilation__desc-bottom.text.text--upercase.text--bold ЦЕЛЬНОЛИТОЙ ЛАТУННЫЙ СМЕСИТЕЛЬ С РЕЗЬБОВЫМИ СОЕДИНЕНИЯМИ И КАРТРИДЖАМИ ИЗ КЕРАМИКИ
+            p.ventilation__desc-bottom.text.text--upercase.text--bold(data-aos="fade-up") ЦЕЛЬНОЛИТОЙ ЛАТУННЫЙ СМЕСИТЕЛЬ С РЕЗЬБОВЫМИ СОЕДИНЕНИЯМИ И КАРТРИДЖАМИ ИЗ КЕРАМИКИ
 
 
         .ventilation__bottom
             img(class="ventilation__wave-bottom" role="presentation" src="img/ventilation-wave-bottom.png" alt="image wave bottom in ventilation block")
 
             ul
-                li
-
+                li(data-aos="fade-right")
                     +svg("clock")
                     span Длительный срок службы до 15 лет
-                li
+                li(data-aos="fade-right" data-aos-duration="500")
                     +svg("celsius")
                     span Стойкость к перепадам температур
-                li
+                li(data-aos="fade-right" data-aos-duration="100")
                     +svg("wawe")
                     span Устойчивость к коррозии и ржавчине
 
             .ventilation__bottom-images
-                img(class="first" src="img/ventilation-image-1.png" alt="shower hose")
-                img(class="second" src="img/ventilation-image-2.png" alt="shower head")
+                img(class="first" src="img/ventilation-image-1.png" alt="shower hose" data-aos="fade-right")
+                img(class="second" src="img/ventilation-image-2.png" alt="shower head" data-aos="fade-right" data-aos-duration="500")
 
 
 

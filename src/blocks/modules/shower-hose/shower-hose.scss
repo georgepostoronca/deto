@@ -8,4 +8,22 @@
       width: 100%;
     }
   }
+
+  .shower-hose-1, .shower-hose-2, .shower-hose-3, .shower-hose-4 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    pointer-events: none;
+  }
+
+  &.aos-animate {
+    .shower-hose-1, .shower-hose-2, .shower-hose-3, .shower-hose-4 {
+      animation: firstAnimation 2s linear forwards;
+    }
+  }
+}
+
+@keyframes firstAnimation {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
