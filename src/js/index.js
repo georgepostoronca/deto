@@ -396,27 +396,23 @@ if(headerHoverItem && headerHoverOpened) {
 }
 
 
-// const swiper = new Swiper(".mySwiper", {
-//     direction: "vertical",
-//     loop: true,
-//     spaceBetween: 7,
-//     slidesPerView: 5,
-//     freeMode: true,
-//     watchSlidesProgress: true,
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-// });
-//
-// const swiper2 = new Swiper(".mySwiper2", {
-//     loop: true,
-//     spaceBetween: 10,
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-//     thumbs: {
-//         swiper: swiper,
-//     },
-// });
+const swiper = new Swiper(".mySwiper", {
+    direction: "vertical",
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+const swiper2 = new Swiper(".mySwiper2", {
+    loop: true,
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiper,
+    },
+});

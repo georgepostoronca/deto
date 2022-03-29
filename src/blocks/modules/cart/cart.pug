@@ -1,63 +1,123 @@
 .cart
-    h3 DETO L790 стандартная
 
-    .cart__grid
-        .cart__slider
+    .cart__top
+        h3 DETO L790 стандартная
 
+    .cart__bottom
         .cart__content
             .cart__content-head
-                .swiper.mySwiper2(style='--swiper-navigation-color: #fff; --swiper-pagination-color: #fff')
-                    .swiper-wrapper
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                    .swiper-button-next
-                    .swiper-button-prev
+                .cart__slider
+                    .swiper.mySwiper2(style='--swiper-navigation-color: #fff; --swiper-pagination-color: #fff')
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src='img/shower-opened.png')
+                            .swiper-slide
+                                img(src='img/shower-opened.png')
+                            .swiper-slide
+                                img(src='img/shower-opened.png')
+                            .swiper-slide
+                                img(src='img/shower-opened.png')
+                            .swiper-slide
+                                img(src='img/shower-opened.png')
+                            .swiper-slide
+                                img(src='img/shower-opened.png')
+                            .swiper-slide
+                                img(src='img/shower-opened.png')
+                            .swiper-slide
+                                img(src='img/shower-opened.png')
+                            .swiper-slide
+                                img(src='img/shower-opened.png')
+                            .swiper-slide
+                                img(src='img/shower-opened.png')
+
+                    .cart__detail
+                        .cart__check
+                            +svg("check-big")
+                            span есть в наличии
+
+                        h3 33 900 ₽
+
+                        em кол-во:
+                        .incdec
+                            button.incdec__minus -
+                            input(type="number" name="incdec" value="1")
+                            button.incdec__plus +
+
+                        .cart__detail-footer
+                            button.cart__detail-btn
+                                span КУПИТЬ
+                            a(href="#") В ИЗБРАННОЕ
+
+                .cart__detail-bottom
+                    .cart__checks
+                        ul
+                            li
+                                label(for="series-l")
+                                    em Установка под ключ
+                                        br
+                                        | серия L
+                                    input(type="checkbox" id="series-l" value="7000" name="cart-checks")
+                                    span + 7 000 ₽
+
+                            li
+                                label(for="termo")
+                                    em Термостатический
+                                        br
+                                        | смеситель
+                                    input(type="checkbox" id="termo" value="9000" name="cart-checks")
+                                    span + 9 000 ₽
+
+                            li
+                                label(for="proggenerator")
+                                    em Парогенератор
+                                    input(type="checkbox" id="proggenerator" value="21000" name="cart-checks")
+                                    span + 21 000 ₽
+
+                    .cart__links
+                        a(href="#") ДОБАВИТЬ В СПИСОК СРАВНЕНИЯ
+                        a(href="#").orange РАССЧИТАТЬ СТОИМОСТЬ ДОСТАВКИ
+                        a(href="#").orange ОФОРМИТЬ В РАССРОЧКУ ИЛИ В КРЕДИТ
+
+                        .cart__stars
+                            div
+                                +svg("star")
+                                +svg("star")
+                                +svg("star")
+                                +svg("star")
+                                +svg("star")
+
+                            span отзывы о товаре (9)
 
 
-                //Thumbs
-                .swiper.mySwiper(thumbsslider='')
-                    .swiper-button-prev
-                        img(src="img/prev.svg" alt="prev")
-                    .swiper-wrapper
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                        .swiper-slide
-                            img(src='img/shower-opened.png')
-                    .swiper-button-next
-                        img(src="img/prev.svg" alt="prev")
+        .cart__thumbs
+            .swiper-button-prev
+                img(src="img/prev.svg" alt="prev")
+
+            //Thumbs
+            .swiper.mySwiper(thumbsslider='')
+                .swiper-wrapper
+                    .swiper-slide
+                        img(src='img/shower-opened.png')
+                    .swiper-slide
+                        img(src='img/shower-opened.png')
+                    .swiper-slide
+                        img(src='img/shower-opened.png')
+                    .swiper-slide
+                        img(src='img/shower-opened.png')
+                    .swiper-slide
+                        img(src='img/shower-opened.png')
+                    .swiper-slide
+                        img(src='img/shower-opened.png')
+                    .swiper-slide
+                        img(src='img/shower-opened.png')
+                    .swiper-slide
+                        img(src='img/shower-opened.png')
+                    .swiper-slide
+                        img(src='img/shower-opened.png')
+                    .swiper-slide
+                        img(src='img/shower-opened.png')
+            .swiper-button-next
+                img(src="img/prev.svg" alt="prev")
+
 
             .cart__content-options
