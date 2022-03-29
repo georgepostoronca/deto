@@ -1,3 +1,50 @@
+.button-cart {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $orange;
+  cursor: pointer;
+  box-shadow: $silver-gradient;
+
+  &.active {
+    &:after {
+      opacity: 1;
+    }
+
+    svg {
+      opacity: 0;
+    }
+  }
+
+  &:after {
+    content: "x";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    color: $white;
+    opacity: 0;
+    transition: .2s;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+    fill: $white;
+    position: relative;
+    left: -2px;
+  }
+}
+
 .cart {
   width: 500px;
   height: 558px;
@@ -5,12 +52,23 @@
   box-shadow: 0 4px 10px #C4C4C4;
   border-radius: 10px;
   position: fixed;
-  right: 50px;
-  //bottom: 20px;
-  top: 50px;
+  right: 70px;
+  bottom: 70px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transform-origin: right bottom;
+  transform: scale(0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: .2s;
+  z-index: 1000;
+
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
 
   h3 {
     font-size: 32px;
@@ -424,7 +482,7 @@
   }
 
   input {
-    width: 30px;
+    width: 40px;
     appearance: none;
     text-align: center;
     font-size: 32px;
@@ -435,6 +493,7 @@
     border: 0;
     outline: none;
     background-color: transparent;
+    pointer-events: none;
 
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {

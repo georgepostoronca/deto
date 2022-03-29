@@ -1,9 +1,12 @@
+.button-cart
+    +svg("cart-svgrepo-com")
+
 .cart
 
     .cart__top
         h3 DETO L790 стандартная
 
-    .cart__bottom
+    form.cart__bottom(data-cart data-default-price="33900")
         .cart__content
             .cart__content-head
                 .cart__slider
@@ -39,9 +42,9 @@
 
                         em кол-во:
                         .incdec
-                            button.incdec__minus -
-                            input(type="number" name="incdec" value="1")
-                            button.incdec__plus +
+                            button(type="button" data-minus).incdec__minus -
+                            input(data-input data-form-incdec type="number" name="incdec" value="1")
+                            button(type="button" data-plus).incdec__plus +
 
                         .cart__detail-footer
                             button.cart__detail-btn
@@ -56,7 +59,7 @@
                                     em Установка под ключ
                                         br
                                         | серия L
-                                    input(type="checkbox" id="series-l" value="7000" name="cart-checks")
+                                    input(data-form-check type="checkbox" id="series-l" value="7000" name="cart-checks")
                                     span + 7 000 ₽
 
                             li
@@ -64,13 +67,13 @@
                                     em Термостатический
                                         br
                                         | смеситель
-                                    input(type="checkbox" id="termo" value="9000" name="cart-checks")
+                                    input(data-form-check type="checkbox" id="termo" value="9000" name="termo")
                                     span + 9 000 ₽
 
                             li
                                 label(for="proggenerator")
                                     em Парогенератор
-                                    input(type="checkbox" id="proggenerator" value="21000" name="cart-checks")
+                                    input(data-form-check type="checkbox" id="proggenerator" value="21000" name="proggenerator")
                                     span + 21 000 ₽
 
                     .cart__links

@@ -416,3 +416,72 @@ const swiper2 = new Swiper(".mySwiper2", {
         swiper: swiper,
     },
 });
+
+var serializeForm = function (form) {
+    var obj = {};
+    var formData = new FormData(form);
+    for (var key of formData.keys()) {
+        obj[key] = formData.get(key);
+    }
+    return obj;
+};
+
+// Cart
+let cart = document.querySelector("[data-cart]");
+
+// Calc Cart
+const calcCart = (form) => {
+    let defaultPrice = parseInt(cart.dataset.defaultPrice);
+    let values = serializeForm(form);
+    console.log(values, defaultPrice);
+
+    let price = defaultPrice;
+    let incdec = values.incdec;
+
+    // Array.
+}
+
+// IncDec
+let incdec = document.querySelectorAll(".incdec");
+Array.from(incdec).forEach(item => {
+    let minus = item.querySelector("[data-minus]");
+    let plus = item.querySelector("[data-plus]");
+    let input = item.querySelector("[data-input]");
+
+    minus.addEventListener("click", item => {
+        if(input.value >= 1) input.value = Number(input.value) + 1;
+        calcCart(cart);
+    })
+
+    plus.addEventListener("click", item => {
+        input.value = Number(input.value) + 1;
+        calcCart(cart);
+    })
+});
+
+if(cart) {
+    let incdec = cart.querySelector("[data-input]");
+    let checks = cart.querySelectorAll("[data-form-check]");
+
+    Array.from(checks).forEach(item => {
+        item.addEventListener("change", () => {
+            console.log(item.value)
+            calcCart(cart);
+        })
+    });
+}
+
+
+let btncart = document.querySelector(".button-cart");
+if(btncart) {
+    let cart = document.querySelector(".cart");
+
+    console.log(btncart)
+    if(btncart) {
+        btncart.addEventListener("click", () => {
+            console.log("awdwadwad", cart)
+            btncart.classList.toggle("active");
+            cart.classList.toggle("active");
+        })
+    }
+}
