@@ -438,13 +438,18 @@ const calcCart = (form) => {
 
     let price = parseInt(defaultPrice);
     let incdec = parseInt(values?.incdec) || 1;
+
+    console.log(price, incdec, values);
+
     let additional = Object.entries(values).reduce((accum, current) => {
         if(current[0] === "incdec") return accum + 0;
+        if(current[0] === "price") return accum + 0;
 
         return accum += parseInt(current[1])
     }, 0);
 
     if(elTotalPrice && elTotalPriceInput) {
+        console.log(price, additional, incdec)
         let totalPrice = (price + additional) * incdec;
         if(Intl) {
             elTotalPrice.innerText = new Intl.NumberFormat().format(totalPrice)

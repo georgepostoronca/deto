@@ -58,6 +58,10 @@ html, body {
     box-sizing: border-box;
 }
 
+.glob-wrapper {
+    overflow: hidden;
+}
+
 * > * {
     box-sizing: inherit;
 }

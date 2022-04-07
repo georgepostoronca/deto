@@ -5,17 +5,18 @@ block variables
 	- const title = "Deto"
 
 block content
-	include ../blocks/modules/header/header
-	include ../blocks/modules/opt-size/opt-size
-	include ../blocks/modules/palette/palette
-	include ../blocks/modules/trop-rain/trop-rain
-	include ../blocks/modules/shower-head/shower-head
-	include ../blocks/modules/shower-hose/shower-hose
-	include ../blocks/modules/ventilation/ventilation
-	include ../blocks/modules/cartridges/cartridges
-	include ../blocks/modules/front-window/front-window
-	include ../blocks/modules/easy-fix/easy-fix
-	include ../blocks/modules/cart/cart
+	.glob-wrapper
+		include ../blocks/modules/header/header
+		include ../blocks/modules/opt-size/opt-size
+		include ../blocks/modules/palette/palette
+		include ../blocks/modules/trop-rain/trop-rain
+		include ../blocks/modules/shower-head/shower-head
+		include ../blocks/modules/shower-hose/shower-hose
+		include ../blocks/modules/ventilation/ventilation
+		include ../blocks/modules/cartridges/cartridges
+		include ../blocks/modules/front-window/front-window
+		include ../blocks/modules/easy-fix/easy-fix
+		include ../blocks/modules/cart/cart
 
 block scripts
 	script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
