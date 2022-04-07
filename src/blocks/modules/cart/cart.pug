@@ -38,7 +38,11 @@
                             +svg("check-big")
                             span есть в наличии
 
-                        h3 33 900 ₽
+                        h3
+                            input(name="price" type="hidden" value="33900" data-total-price-input)
+                            span(data-total-price)
+                                | 33 900
+                            | &nbsp;₽
 
                         em кол-во:
                         .incdec

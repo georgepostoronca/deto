@@ -431,14 +431,29 @@ let cart = document.querySelector("[data-cart]");
 
 // Calc Cart
 const calcCart = (form) => {
+    let elTotalPrice = document.querySelector("[data-total-price]")
+    let elTotalPriceInput = document.querySelector("[data-total-price-input]")
     let defaultPrice = parseInt(cart.dataset.defaultPrice);
     let values = serializeForm(form);
-    console.log(values, defaultPrice);
 
-    let price = defaultPrice;
-    let incdec = values.incdec;
+    let price = parseInt(defaultPrice);
+    let incdec = parseInt(values?.incdec) || 1;
+    let additional = Object.entries(values).reduce((accum, current) => {
+        if(current[0] === "incdec") return accum + 0;
 
-    // Array.
+        return accum += parseInt(current[1])
+    }, 0);
+
+    if(elTotalPrice && elTotalPriceInput) {
+        let totalPrice = (price + additional) * incdec;
+        if(Intl) {
+            elTotalPrice.innerText = new Intl.NumberFormat().format(totalPrice)
+            elTotalPriceInput.value = new Intl.NumberFormat().format(totalPrice)
+        } else {
+            elTotalPrice.innerText = totalPrice;
+            elTotalPriceInput.value = totalPrice;
+        }
+    }
 }
 
 // IncDec
@@ -449,7 +464,7 @@ Array.from(incdec).forEach(item => {
     let input = item.querySelector("[data-input]");
 
     minus.addEventListener("click", item => {
-        if(input.value >= 1) input.value = Number(input.value) + 1;
+        if(input.value > 1) input.value = Number(input.value) - 1;
         calcCart(cart);
     })
 
@@ -465,10 +480,15 @@ if(cart) {
 
     Array.from(checks).forEach(item => {
         item.addEventListener("change", () => {
-            console.log(item.value)
             calcCart(cart);
         })
     });
+
+    cart.addEventListener("submit", (event) => {
+        event.preventDefault();
+        let formData = new FormData(event.currentTarget);
+        formData.forEach(item => console.log(item));
+    })
 }
 
 
@@ -476,10 +496,8 @@ let btncart = document.querySelector(".button-cart");
 if(btncart) {
     let cart = document.querySelector(".cart");
 
-    console.log(btncart)
     if(btncart) {
         btncart.addEventListener("click", () => {
-            console.log("awdwadwad", cart)
             btncart.classList.toggle("active");
             cart.classList.toggle("active");
         })
