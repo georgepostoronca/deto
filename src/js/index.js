@@ -497,12 +497,20 @@ if(cart) {
 }
 
 
-let btncart = document.querySelector(".button-cart");
+let btncart = document.querySelector(".js-cart-close");
 if(btncart) {
     let cart = document.querySelector(".cart");
+    let btncartmobile = document.querySelector(".js-cart-close-mobile");
 
     if(btncart) {
         btncart.addEventListener("click", () => {
+            btncart.classList.toggle("active");
+            cart.classList.toggle("active");
+        })
+    }
+
+    if(btncartmobile) {
+        btncartmobile.addEventListener("click", () => {
             btncart.classList.toggle("active");
             cart.classList.toggle("active");
         })

@@ -1,4 +1,5 @@
 .button-cart {
+  z-index: 999;
   width: 60px;
   height: 60px;
   border-radius: 100%;
@@ -64,6 +65,17 @@
   transition: .2s;
   z-index: 1000;
 
+  @media(max-width: 680px) {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    overflow: auto;
+    padding-bottom: 20px;
+  }
+
   &.active {
     opacity: 1;
     transform: scale(1);
@@ -78,6 +90,38 @@
     padding-left: 12px;
     padding-right: 12px;
     margin-top: 9px;
+
+    @media(max-width: 680px) {
+      font-size: 25px;
+      line-height: 1;
+    }
+  }
+
+  &__close {
+    display: none;
+
+    @media(max-width: 680px) {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      padding: 10px 20px;
+    }
+
+    button {
+      padding: 0;
+      appearance: none;
+      margin: 0;
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+      display: block;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
   }
 
   &__top {
@@ -88,6 +132,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media(max-width: 680px) {
+      height: auto;
+      margin-bottom: 20px;
+    }
   }
 
   &__bottom {
@@ -100,6 +149,13 @@
     display: flex;
     flex-direction: row-reverse;
     height: calc(100% - 127px);
+
+    @media(max-width: 680px) {
+      height: auto;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   &__grid {
@@ -110,6 +166,10 @@
     width: 57px;
     height: 100%;
     position: relative;
+
+    @media(max-width: 680px) {
+      display: none;
+    }
 
     .swiper-button-prev, .swiper-button-next {
       width: 100%;
@@ -148,11 +208,20 @@
     flex: 1;
     padding-left: 45px;
 
+    @media(max-width: 680px) {
+      width: 100%;
+      padding-left: 0;
+    }
+
     &-head {
       width: 100%;
       height: 100%;
       display: flex;
       flex-wrap: wrap;
+
+      @media(max-width: 420px) {
+        display: block;
+      }
     }
 
     &-options {
@@ -163,9 +232,21 @@
   &__slider {
     display: flex;
 
+    @media(max-width: 680px) {
+      width: 100%;
+    }
+
+    @media(max-width: 420px) {
+      display: block;
+    }
+
     .swiper {
       width: 133px;
       height: 204px;
+
+      @media(max-width: 420px) {
+        width: 100%;
+      }
     }
 
     .swiper-slide {
@@ -188,6 +269,11 @@
     box-sizing: border-box;
     padding-left: 30px;
     padding-top: 10px;
+
+    @media(max-width: 420px) {
+      width: 100%;
+      padding-left: 0;
+    }
 
     h3 {
       padding: 0;
@@ -307,12 +393,21 @@
       width: 100%;
       display: flex;
       padding-top: 12px;
+
+      @media(max-width: 420px) {
+        display: block;
+      }
     }
   }
 
   &__checks {
     width: 115px;
     padding-left: 7px;
+
+    @media(max-width: 420px) {
+      width: 100%;
+      padding-left: 0;
+    }
 
     ul {
       padding: 0;
@@ -389,6 +484,12 @@
     box-sizing: border-box;
     padding-top: 10px;
 
+    @media(max-width: 420px) {
+      width: 100%;
+      padding-left: 0;
+      padding-top: 20px;
+    }
+
     a {
       font-size: 8.5px;
       letter-spacing: 1px;
@@ -398,6 +499,7 @@
       display: inline-block;
       text-decoration: none;
       color: $braun;
+      display: block;
 
       &:hover {
         text-decoration: underline;
