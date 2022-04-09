@@ -236,17 +236,17 @@
       width: 100%;
     }
 
-    @media(max-width: 420px) {
-      display: block;
-    }
+    //@media(max-width: 420px) {
+    //  display: block;
+    //}
 
     .swiper {
       width: 133px;
       height: 204px;
 
-      @media(max-width: 420px) {
-        width: 100%;
-      }
+      //@media(max-width: 420px) {
+      //  width: 100%;
+      //}
     }
 
     .swiper-slide {
@@ -271,8 +271,9 @@
     padding-top: 10px;
 
     @media(max-width: 420px) {
-      width: 100%;
-      padding-left: 0;
+      //width: 100%;
+      //padding-left: 0;
+      padding-left: 20px;
     }
 
     h3 {
@@ -354,6 +355,10 @@
       display: flex;
       align-items: center;
 
+      @media(max-width: 420px) {
+        flex-wrap: wrap;
+      }
+
       button {
         margin-right: 18px;
         margin-top: 8px;
@@ -368,6 +373,10 @@
         position: relative;
         text-decoration: none;
         color: $braun;
+
+        @media(max-width: 420px) {
+          margin-top: 5px;
+        }
 
         &:hover {
           &:after {
@@ -394,10 +403,6 @@
       width: 100%;
       display: flex;
       padding-top: 12px;
-
-      @media(max-width: 420px) {
-        display: block;
-      }
     }
   }
 
@@ -406,7 +411,7 @@
     padding-left: 7px;
 
     @media(max-width: 420px) {
-      width: 100%;
+      //width: 100%;
       padding-left: 0;
     }
 
@@ -486,9 +491,8 @@
     padding-top: 10px;
 
     @media(max-width: 420px) {
-      width: 100%;
+      //width: 100%;
       padding-left: 0;
-      padding-top: 20px;
     }
 
     a {
@@ -516,6 +520,10 @@
     display: flex;
     align-items: center;
 
+    @media(max-width: 420px) {
+      display: block;
+    }
+
     div {
       display: flex;
       align-items: center;
@@ -534,6 +542,10 @@
       font-size: 8.5px;
       line-height: 1;
       color: $silver2;
+
+      @media(max-width: 420px) {
+        display: block;
+      }
     }
   }
 
@@ -547,6 +559,11 @@
       width: 30px;
       height: 26px;
       fill: currentColor;
+
+      @media(max-width: 420px) {
+        width: 20px;
+        height: 16px;
+      }
     }
 
     span {
@@ -556,6 +573,10 @@
       color: inherit;
       padding-left: 4px;
       line-height: 1;
+
+      @media(max-width: 420px) {
+        font-size: 13px;
+      }
     }
   }
 
