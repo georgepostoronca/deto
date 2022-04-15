@@ -397,7 +397,6 @@ if(headerHoverItem && headerHoverOpened) {
 
 
 const swiper = new Swiper(".mySwiper", {
-    direction: "vertical",
     loop: true,
     spaceBetween: 10,
     slidesPerView: 5,
@@ -406,6 +405,18 @@ const swiper = new Swiper(".mySwiper", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 3
+        },
+        480: {
+            slidesPerView: 4
+        },
+        681: {
+            slidesPerView: 5,
+            direction: "vertical",
+        }
     },
 });
 
@@ -439,17 +450,14 @@ const calcCart = (form) => {
     let price = parseInt(defaultPrice);
     let incdec = parseInt(values?.incdec) || 1;
 
-    console.log(price, incdec, values);
-
     let additional = Object.entries(values).reduce((accum, current) => {
         if(current[0] === "incdec") return accum + 0;
         if(current[0] === "price") return accum + 0;
 
-        return accum += parseInt(current[1])
+        return accum += parseInt(current[1]);
     }, 0);
 
     if(elTotalPrice && elTotalPriceInput) {
-        console.log(price, additional, incdec)
         let totalPrice = (price + additional) * incdec;
         if(Intl) {
             elTotalPrice.innerText = new Intl.NumberFormat().format(totalPrice)
@@ -497,22 +505,42 @@ if(cart) {
 }
 
 
-let btncart = document.querySelector(".js-cart-close");
+let btncart = document.querySelector(".js-cart-toggle");
 if(btncart) {
     let cart = document.querySelector(".cart");
     let btncartmobile = document.querySelector(".js-cart-close-mobile");
+    let btncartopen = document.querySelector(".js-cart-open");
 
     if(btncart) {
         btncart.addEventListener("click", () => {
             btncart.classList.toggle("active");
             cart.classList.toggle("active");
-        })
+        });
     }
 
     if(btncartmobile) {
         btncartmobile.addEventListener("click", () => {
             btncart.classList.toggle("active");
             cart.classList.toggle("active");
-        })
+        });
     }
+
+    if(btncartopen) {
+        btncartopen.addEventListener("click", () => {
+            btncart.classList.add("active");
+            cart.classList.add("active");
+        });
+    }
+}
+
+
+// ShoHidbe Button Cart
+function showHideButtonCart(button) {
+    window.scrollY >= window.innerHeight / 3 ? button.classList.add("show") : button.classList.remove("show");
+}
+showHideButtonCart(btncart);
+
+window.onscroll = function() {
+    showHideButtonCart(btncart);
+    console.log(window.scrollY)
 }
